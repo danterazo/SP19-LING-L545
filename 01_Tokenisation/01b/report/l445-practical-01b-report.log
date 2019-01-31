@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.1.31)  31 JAN 2019 18:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.1.31)  31 JAN 2019 18:40
 entering extended mode
-**./l445-practical-01-report.tex
-(l445-practical-01-report.tex
+**./l445-practical-01b-report.tex
+(l445-practical-01b-report.tex
 LaTeX2e <2018-12-01>
 ("C:\Users\dante\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\article.cls"
 Document Class: article 2018/09/03 v1.4i Standard LaTeX document class
@@ -825,8 +825,8 @@ sty"
 File: lstlang3.sty 2018/09/02 1.7 listings language file
 )
 \c@homeworkProblemCounter=\count297
- (l445-practical-01-report.aux)
-\openout1 = `l445-practical-01-report.aux'.
+ (l445-practical-01b-report.aux)
+\openout1 = `l445-practical-01b-report.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 185.
 LaTeX Font Info:    ... okay on input line 185.
@@ -920,19 +920,7 @@ G,.JBIG2,.JB2,.eps]
 \c@lstlisting=\count304
  ABD: EveryShipout initializing macros [1
 
-{C:/Users/dante/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] (l445-pract
-ical-01-report.toc)
-\tf@toc=\write4
-\openout4 = `l445-practical-01-report.toc'.
-
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 22.54448pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[2] 
+{C:/Users/dante/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] 
 AED: lastpage setting LastPage
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -940,24 +928,24 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[3] (l445-practical-01-report.aux) ) 
+[2] (l445-practical-01b-report.aux) ) 
 Here is how much of TeX's memory you used:
- 24955 strings out of 492946
- 490661 string characters out of 3126266
- 791679 words of memory out of 3000000
- 28519 multiletter control sequences out of 15000+200000
- 538028 words of font info for 44 fonts, out of 3000000 for 9000
+ 24949 strings out of 492946
+ 490450 string characters out of 3126266
+ 790682 words of memory out of 3000000
+ 28516 multiletter control sequences out of 15000+200000
+ 537574 words of font info for 42 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 64i,11n,63p,408b,317s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/dante/AppData/Local/Programs/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/dante/AppData/Local/
-Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/dante/A
-ppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/U
-sers/dante/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr
-12.pfb>
-Output written on l445-practical-01-report.pdf (3 pages, 64071 bytes).
+ 64i,11n,63p,409b,317s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/dante/AppData/Local/Programs/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/dante/AppData/Local
+/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/dante/
+AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/
+Users/dante/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
+r12.pfb>
+Output written on l445-practical-01b-report.pdf (2 pages, 61417 bytes).
 PDF statistics:
- 31 PDF objects out of 1000 (max. 8388607)
+ 28 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
