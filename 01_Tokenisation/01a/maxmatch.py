@@ -6,16 +6,16 @@ from nltk.tokenize import sent_tokenize
 def maxmatch(wiki, words):
     fifty = wiki.read().strip("<onlyinclude>").split(":\n")[1:50]
 
-    print("file:", fifty)
+    return fifty
 
 
-def nltk():
-    text = "testing. testing. testing!"
-    sent_tokenize_list = sent_tokenize(text)
-    len(sent_tokenize_list)
-    sent_tokenize_list
-    # > import nltk
-    # > nltk.download()
+def nltk(w):
+    sample_text = "this's a sent tokenize test. this is sent two. is this sent three? sent 4 is cool! Now it’s your turn."
+    sent_tokenize_list = sent_tokenize(sample_text)
+    print("NLTK1: %f, %s\n", len(sent_tokenize_list), sent_tokenize_list)
+
+    my_tokenize_list = sent_tokenize(w.read())
+    print("NLTK2: %f, %s\n", len(my_tokenize_list), my_tokenize_list)
 
 
 if __name__ == "__main__":
@@ -24,4 +24,4 @@ if __name__ == "__main__":
 
     tokens = maxmatch(wiki, words)
     print(tokens)
-    nltk()
+    nltk(wiki)
