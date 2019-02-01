@@ -3,11 +3,11 @@
 *.iml
 desktop.ini
 
-.aux
-.log
-.synctex
-.synctex.gz
-.toc
+*.aux
+*.log
+*.synctex
+*.synctex.gz
+*.toc
 
 /01_Tokenisation/01a/pragmatic_segmenter
 /01_Tokenisation/01a/UD_Japanese-GSD
