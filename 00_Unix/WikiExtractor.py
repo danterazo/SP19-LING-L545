@@ -379,7 +379,7 @@ def make_anchor_tag(match):
 
 
 def clean(text):
-    # FIXME: templates should be expanded
+    # templates should be expanded
     # Drop transclusions (template, parser functions)
     # See: http://www.mediawiki.org/wiki/Help:Templates
     text = dropNested(text, r'{{', r'}}')
