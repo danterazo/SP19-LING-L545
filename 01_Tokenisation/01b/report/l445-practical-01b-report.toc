@@ -1,6 +1,0 @@
-\contentsline {section}{Practical 1B Questions}{3}% 
-\contentsline {subsection}{Why should we split punctuation from the token it goes with?}{3}% 
-\contentsline {subsection}{Should abbreviations with space in them be written as a single token or two tokens?}{3}% 
-\contentsline {subsection}{How about numerals like 134 000?}{3}% 
-\contentsline {subsection}{If you have a case suffix following punctuation, how should it be tokenized ?}{3}% 
-\contentsline {subsection}{Should contractions and clitics be a single token or two (or more) tokens?}{3}% 

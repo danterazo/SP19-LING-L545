@@ -1,9 +1,0 @@
-\contentsline {section}{Segmenters}{3}% 
-\contentsline {subsection}{diasks2's Pragmatic Segmenter}{3}% 
-\contentsline {subsection}{NLTK\IeC {\textquoteright }s Punkt}{3}% 
-\contentsline {section}{Quantitative Evaluation}{3}% 
-\contentsline {section}{Qualitative Evaluation}{3}% 
-\contentsline {section}{Maxmatch}{3}% 
-\contentsline {subsection}{Implementation}{3}% 
-\contentsline {subsection}{How to Use}{3}% 
-\contentsline {subsection}{Performance}{3}% 
