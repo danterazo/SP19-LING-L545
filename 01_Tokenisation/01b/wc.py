@@ -1,5 +1,11 @@
 import sys
 
+"""
+TODO:
+- Fix word count
+- Syllable count
+"""
+
 
 def wc():
     # returns (line count, word count, character count
@@ -16,8 +22,6 @@ def wc():
 
     return lc, wc, cc, sc
 
-
-# TODO: syllable count
 
 if __name__ == "__main__":
     print(wc())
