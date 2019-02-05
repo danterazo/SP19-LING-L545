@@ -5,8 +5,7 @@ the Unix 'cat' command
 import sys
 
 # Read in everything from standard input
-text = sys.stdin.read()
+text = sys.stdin.read()  # NOTE: unintelligble output; unicode issue
 
 # Output everything to standard output
-#sys.stdout.write(text) #TODO: unicode output
-print(text)
+sys.stdout.write(text)
