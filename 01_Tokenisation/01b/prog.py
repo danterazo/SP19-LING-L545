@@ -1,6 +1,6 @@
 import sys
 
-a = 0 # This is a variable for counting the number of vowels
+a = 0  # This is a variable for counting the number of vowels
 
 for c in sys.stdin.read():
     print('Main loop:', a, c, file=sys.stderr)
