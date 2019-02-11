@@ -2,7 +2,7 @@
 # Dante Razo, drazo
 from nltk.tokenize import sent_tokenize
 
-
+# sample code, not mine
 def maxmatch(wiki, words):
     fifty = wiki.read().strip("<onlyinclude>").split(":\n")[1:50]
 
