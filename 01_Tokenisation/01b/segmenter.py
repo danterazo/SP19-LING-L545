@@ -1,4 +1,4 @@
-import sys, codecs, fileinput
+import sys, codecs
 
 
 def segmenter():
