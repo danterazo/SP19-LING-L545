@@ -1,10 +1,6 @@
+# LING-L 445: Practical 1B
+# Dante Razo, drazo
 import sys
-
-"""
-TODO:
-- Fix word count
-- Syllable count
-"""
 
 
 def wc():
@@ -19,6 +15,9 @@ def wc():
             lc += 1
         elif c is ' ':
             wc += 1
+
+    # TODO: fix word count functionality
+    # TODO: add syllable count functionality
 
     return lc, wc, cc, sc
 
