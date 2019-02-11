@@ -8,7 +8,7 @@ def segmenter():
 
 
 def segmenterRU():
-    corpus = codecs.open("russian.txt", "r", encoding="cp1251")  # russian encoding: cp1251
+    corpus = codecs.open("corpus/russian.txt", "r", encoding="cp1251")  # russian encoding: cp1251
     output = codecs.open("russian-segmented.txt", "w", encoding="cp1251")  # create new file for output
 
     output.write(corpus.read().replace('.', '. \n'))  # NOTE: doesn't work with '. ', unsure why
