@@ -6,22 +6,12 @@ def segmenter():
 
 
 def segmenterRU():
-    corpus = codecs.open("russian.txt", "r", encoding="cp1251")  # russian encoding: cp1251
-    codecs.open("russian-segmented.txt", "w").writelines(
-        [l for l in open("russian.txt").readlines()])  # copy input -> output
+    corpus = codecs.open("russian.txt", "r")  # russian encoding: cp1251
+    output = codecs.open("russian-segmented.txt", "w")  # create new file for output
 
-    # segment new file by replacing full stops with newlines
-    with fileinput.FileInput("russian-segmented.txt", inplace=True) as file:
-        for line in file:
-            print(line.replace('.', '.\n'), end='')  # TODO: doesn't work when replacing '. '; using temp fix
-
-    # print(output.read().replace('. ', '.\n'))
-    # output.write(output.read().replace('. ', '.\n'))
-    # russian encoding: cp1251
-
+    output.write(corpus.read().replace('.', '.\n'))
     corpus.close()
-
-    # CLOSE files
+    output.close()
 
 
 if __name__ == "__main__":
