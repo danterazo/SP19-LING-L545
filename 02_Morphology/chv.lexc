@@ -9,12 +9,16 @@ LEXICON Root
 
 Nouns ; 
 
+LEXICON CASES 
+
+%<ins%>:%>п%{A%} # ;
+
 LEXICON PLURAL
 
-             # ; 
-%<pl%>:%>сем # ;
+             CASES ;
+%<pl%>:%>сем CASES ;
 
-LEXICON N 
+LEXICON N
 
 %<n%>: PLURAL ;
 
