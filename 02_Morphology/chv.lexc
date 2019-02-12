@@ -1,7 +1,26 @@
 Multichar_Symbols
 
 %<n%>                ! Имя существительное, Noun
+%<pl%>               ! Множественное число, Plural
+
+%>                   ! Граница морфемы, Morpheme boundary
 
 LEXICON Root
 
-урам%<n%>:урам # ;   ! "улица", "street"
+Nouns ; 
+
+LEXICON PLURAL
+
+             # ; 
+%<pl%>:%>сем # ;
+
+LEXICON N 
+
+%<n%>: PLURAL ;
+
+LEXICON Nouns
+
+урам:урам N ;     ! "улица", "street"
+пахча:пахча N ;   ! "сад", "garden"
+хула:хула N ;     ! "город", "city"
+канаш:канаш N ;   ! "совет", "council"
