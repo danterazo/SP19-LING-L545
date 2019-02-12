@@ -3,3 +3,8 @@ Alphabet
   А Ӑ Е Ё Ӗ И О У Ӳ Ы Э Ю Я Б В Г Д Ж З К Л М Н П Р С Ҫ Т Ф Х Ц Ч Ш Щ Й Ь Ъ 
  %{A%}:а %{A%}:е
 ;
+
+Rules 
+
+"Remove morpheme boundary"
+%>:0 <=> _ ;
