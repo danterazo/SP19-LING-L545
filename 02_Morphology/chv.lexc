@@ -2,13 +2,16 @@ Multichar_Symbols
 
 %<n%>                ! Имя существительное, Noun
 %<pl%>               ! Множественное число, Plural
-%{A%}                ! Archiphoneme
+%<nom%>              ! Именительный падеж, Nominative
+%<ins%>              ! Творительный падеж, Instrumental
+
+%{A%}                ! Архифонема [а] или [е], Archiphoneme [a] or [e]
 
 %>                   ! Граница морфемы, Morpheme boundary
 
 LEXICON Root
 
-Nouns ; 
+Nouns ;
 
 LEXICON CASES 
 
