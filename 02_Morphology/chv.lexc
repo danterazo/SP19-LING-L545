@@ -2,7 +2,7 @@ Multichar_Symbols
 
 %<n%>                ! Имя существительное, Noun
 %<pl%>               ! Множественное число, Plural
-%<A%>                ! Archiphoneme
+%{A%}                ! Archiphoneme
 
 %>                   ! Граница морфемы, Morpheme boundary
 
