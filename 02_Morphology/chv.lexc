@@ -19,8 +19,8 @@ LEXICON CASES
 
 LEXICON PLURAL
 
-             CASES ;
-%<pl%>:%>сем CASES ;
+                 CASES ;
+%<pl%>:%>се%{м%} CASES ;
 
 LEXICON N
 
