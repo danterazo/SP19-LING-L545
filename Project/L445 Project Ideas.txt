@@ -1,0 +1,2 @@
+- Finite state of unknown/understudied language
+* Speech Synthesis for language that doesn't already have it (e.g. Chuvash)
