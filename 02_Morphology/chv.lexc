@@ -6,6 +6,8 @@ Multichar_Symbols
 %<ins%>              ! Творительный падеж, Instrumental
 
 %{A%}                ! Архифонема [а] или [е], Archiphoneme [a] or [e]
+%{Ă%}                !
+%{м%}                ! plural
 
 %>                   ! Граница морфемы, Morpheme boundary
 
@@ -16,6 +18,7 @@ Nouns ;
 LEXICON CASES 
 
 %<ins%>:%>п%{A%} # ;
+%<gen%>:%>%{Ă%}н # ;
 
 LEXICON PLURAL
 

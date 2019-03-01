@@ -3,12 +3,13 @@ Alphabet
   А Ӑ Е Ё Ӗ И О У Ӳ Ы Э Ю Я Б В Г Д Ж З К Л М Н П Р С Ҫ Т Ф Х Ц Ч Ш Щ Й Ь Ъ
   %{A%}:а %{A%}:е
   %{Ă%}:ӑ %{Ă%}:ӗ %{Ă%}:0
-  %{м%}:м %{м%}:0
+  %{м%}:м %{м%}:0 %{м%}:н
 ;
 
 Sets
 BackVow = ӑ а ы о у я ё ю ;
 FrontVow = ӗ э и ӳ е ;
+Vowels = ӑ а ы о у я ё ю ӗ э и ӳ е ;
 Cns = б в г д ж з к л м н п р с ҫ т ф х ц ч ш щ й ь ъ ;
 
 Rules
@@ -17,3 +18,6 @@ Rules
 
 "Back vowel harmony for archiphoneme {A}"
 %{A%}:а <=> BackVow: [ Cns: | %>: ]+ _ ;
+
+"surface vowel before the morpheme boundary "
+%{Ӑ%}:0 <=>  :Vowels %>:
