@@ -1,0 +1,308 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Stylish Article
+% LaTeX Template
+% Version 2.1 (1/10/15)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Mathias Legrand (legrand.mathias@gmail.com) 
+% With extensive modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Document provided by Dr. Hasan Kurban of Indiana University Bloomington
+
+%-------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%-------------------------------------------------------------------------------------
+
+\documentclass[fleqn,10pt]{SelfArx} % Document font size and equations flushed left
+
+\usepackage[russian,english]{babel} % Specify a different language here - english by default
+
+\usepackage{lipsum} % Required to insert dummy text. To be removed otherwise
+\usepackage{varwidth}
+\usepackage[symbol]{footmisc}
+\usepackage[superscript,biblabel]{cite}
+\usepackage[utf8]{inputenc} % For Cyrillic
+\usepackage[OT2,T1]{fontenc}
+
+%-------------------------------------------------------------------------------------
+%	COLUMNS
+%-------------------------------------------------------------------------------------
+
+\setlength{\columnsep}{0.55cm} % Distance between the two columns of text
+\setlength{\fboxrule}{0.75pt} % Width of the border around the abstract
+
+%-------------------------------------------------------------------------------------
+%	COLORS
+%-------------------------------------------------------------------------------------
+
+\definecolor{color1}{RGB}{0,0,90} % Color of the article title and sections
+\definecolor{color2}{RGB}{0,20,20} % Color of the boxes behind the abstract and headings
+
+%-------------------------------------------------------------------------------------
+%	HYPERLINKS
+%-------------------------------------------------------------------------------------
+
+\usepackage{hyperref} % Required for hyperlinks
+\hypersetup{hidelinks,colorlinks,breaklinks=true,urlcolor=color2,citecolor=color1,linkcolor=color1,bookmarksopen=false,pdftitle={Title},pdfauthor={Author}}
+
+%-------------------------------------------------------------------------------------
+%	ARTICLE INFORMATION
+%-------------------------------------------------------------------------------------
+
+\JournalInfo{LING-L 445: Computation and Linguistic Analysis 2019} % Journal information
+\Archive{} % Additional notes (e.g. copyright, DOI, review/research article)
+
+\PaperTitle{LING-L 445 Course Project RFP 2e} % Article title	
+
+\Authors{Dante Razo\textsuperscript{†}} % Authors
+\affiliation{\textsuperscript{†}\textit{Computer Science; School of Informatics, Computing and Engineering, Indiana University, Bloomington, IN, USA}} % Author affiliation
+
+\Keywords{chuvash --- deep learning --- linguistics --- speech synthesis --- text-to-speech --- transfer learning} % Keywords - if you don't want any simply remove all the text between the curly brackets
+\newcommand{\keywordname}{Keywords} % Defines the keywords heading name
+
+%------------------------------------------------------------------------
+%	ABSTRACT
+%------------------------------------------------------------------------
+\Abstract{Chuvash is a minority language spoken by roughly one million people in European Russia\cite{russianBureauStatistics}. This project aims to train speech synthesizers with neural networks to reproduce intelligible Chuvash from text. The synthesizers used are Ossian, Mozilla TTS, and Mozilla LPCNet. At the minimum, the performance of the three will be compared. The Expected Product involves cleaning the Chuvash data to produce better results with one of the three synthesizers. If time permits, the best-performing synthesizer will be tweaked to produce even more accurate results. Data will come from reliable sources such as the Apertium project. The end goal is to train a neural network that mimics Chuvash speech to some degree, then improve on it as much as time allows.}
+
+%------------------------------------------------------------------------
+\begin{document}
+\flushbottom % Makes all text pages the same height
+\maketitle % Print the title and abstract box
+\tableofcontents % Print the contents section
+\thispagestyle{empty} % Removes page numbering from the first page
+
+%------------------------------------------------------------------------
+% Dante's Notes
+%------------------------------------------------------------------------
+% Guidelines: http://cl.indiana.edu/~ftyers/courses/2019/L-545/projects/rfp.html
+	
+%Common voice - lots of Langs don't have speech synthesis
+%Clean data before using
+%Same speaker (ID)
+
+%Could do Chuvash
+
+%Project:
+%MVP: compare state of the art
+%medium: extend them or (easier) clean data better
+
+%------------------------------------------------------------------------
+% SECTION 1: Intro
+%------------------------------------------------------------------------
+
+\section{Introduction}
+The Chuvash language is spoken by roughly one million people in European Russia\cite{russianBureauStatistics}. Despite the large number of speakers, it is considered a minority language. This project aims to train popular speech synthesizers to produce intelligible Chuvash from written samples.
+
+Speech synthesis is the production of artificial human speech\cite{speechSynthesis}. Text-to-speech (TTS) is a subset of the field which focuses on taking text as input, and returning audio ``speech'' as output. There are multiple ways to do TTS, but this project will focus on Deep Neural Networks (DNNs). The best DNNs on the market sound like real humans, but they can still be distinguished by their staggered manner of speaking.
+
+Text-to-speech works by accepting text, conducting linguistic analysis on the input, then producing audio waveforms. Data preprocessing techniques include normalization and tokenization\cite{lexAnalysis}, though the latter is meant for text corpora used as input. Audio could be ``preprocessed'' by normalizing volume and editing silence out from samples.
+
+The DNNs used in this project will be trained on audio samples mainly taken from Chuvash-language news programs. Due to the small number of samples ($\sim546$) for the task at hand, I'll likely need to do transfer learning to get the best results. This technique is explained in further detail in \S2.3.
+
+%------------------------------------------------------------------------
+% SECTION 2: Goals
+%------------------------------------------------------------------------
+\section{Proposed Goals}
+\subsection{Minimum Viable Product (MVP)}
+My MVP is to compare the performance of existing speech synthesizers with the Chuvash language. I plan on using the following solutions:
+\begin{enumerate}
+	\item Ossian
+	\item Mozilla TTS
+	\item Mozilla LPCNet
+\end{enumerate}
+
+The Ossian library will use deep neural networks (DNNs) trained by the Merlin toolkit as models. Mozilla TTS is a deep learning speech synthesis engine that accepts preprocessed datasets\cite{mozillaTTS}. Mozilla's LPCNet requires at least an hour of speech data\cite{mozillaLPC}, so I'll be using Francis M. Tyers' \texttt{Turkic\_TTS} repository to train it. It remains to be seen whether this will be enough data to properly train LPCNet; transfer learning may be required (see \S2.3).
+
+In order to understand the subject matter, I will work on memorizing the Cyrillic script and Chuvash's additional four letters. This will help me sound out text and isolated symbols (disregarding irregular phonological features such as palatalization). Almost a third of the characters used in Chuvash are reserved for Russian loanwords\cite{wikChuvash}, but they are worth learning in case they appear in the data.
+
+\subsection{Expected Product (EP)}
+I will explore new methods of preprocessing the data in hopes of improving model accuracy. Due to the fact that data has to be processed differently to work for each synthesizer, I will likely choose one to focus on for the duration of the project. Ideas include changing audio bitrate, removing unintelligible/messy audio samples, ReplayGain volume normalization, removing silence from audio samples, and k-folds cross-validation (separating the data into separate groups for testing and training).
+
+\subsection{High-achievement Product (HAP)}
+Comparing the different speech synthesizers will give me insight into their strengths and weaknesses. With this knowledge, I will tweak them (or my preferred synthesizer) in an effort to improve their effectiveness. If I see significant improvement in accuracy, I will consider reaching out to the original developers and discussing how to incorporate my changes with their source code.
+
+If there is ample time to do so, I'll use transfer learning to make up for the lack of high-quality labeled Chuvash audio data. This would entail training a DNN on the English language (for which audio samples are plentiful) and applying insights (i.e. neuron weights) to a Chuvash-trained DNN\cite{tdsTransferLearning}. As a native speaker, I'll be able to evaluate English audio output by myself. The problem is the same, just with different languages, so speech synthesis for English can still be used to enhance a Chuvash DNN.
+
+\subsection{Final Evaluation}
+For evaluation, I will try to get in touch with Chuvash speakers and have them give feedback on the audio output. I plan on using social media to gather some volunteers. This goal is contingent on whether I can find people fluent in both English and Chuvash who are willing to donate some of their time and stay in contact.
+
+In the event that I can't find bilingual speakers who are willing to help, I'll use k-folds cross validation to hold out a subset of the data. I can compare this collection of natural Chuvash with synthesized samples to determine a speech synthesis system's most important attributes: naturalness and intelligibility\cite{taylorTTS}. I've devised a tentative scoring system (subject to future improvements) to keep evaluations subjective and allow for comparisons between the models:
+
+\begin{enumerate}
+	\item The audio can be transcribed to some degree (resembles speech) [+3 points]
+	\item Quality of output:
+	\begin{enumerate}
+		\item The transcription matches the input text exactly [+5]
+		\item The transcription's consonants match the input text, but some vowels differ [+4]
+		\item The transcription has some overlap with the input text, but a few vowels and consonants differ [+3]
+		\item The audio can be transcribed (meaning it produces intelligible phonemes), but it doesn't match the transcription [+1]
+	\end{enumerate}
+	\item Intonation sounds natural [+1]
+	\item Cadence sounds natural [+1]
+\end{enumerate}
+
+This system rewards successfully producing natural-sounding waveforms, even if they aren't what we want. A score $\geq10$ indicates an intelligible model. Models that score above 8 are considered satisfactory, but may sound ``cold'' and ``robotic''. Intonation and cadence will be subjective to non-native speakers of the language, hence their low weight on the final score. If I can find Chuvash speakers, I will ask them to rate intonation and cadence on a scale of 1-6 for a total of 20 points that could be earned. I choose 6 so they can't pick 3 as a neutral/indifferent response; instead, every answer will be weighted towards either bad (1-3) or good (4-6).
+
+%------------------------------------------------------------------------
+% SECTION 3: Project Requirements
+%------------------------------------------------------------------------
+\section{Requirements}
+\subsection{MVP Goals}
+\subsubsection{Subgoal 1}
+Configure all three speech synthesizers as described in their tutorials, and confirm that they work.
+\subsubsection{Subgoal 2}
+Find suitable Chuvash data for training and process it for use with all synthesizers
+\subsubsection{Subgoal 3}
+Train synthesizers on Chuvash data and report results. Evaluate the models with single words.
+
+\subsection{EP Goals}
+\subsubsection{Subgoal 1}
+Employ different preprocessing techniques until model accuracy is significantly higher than it was before.
+\subsubsection{Subgoal 2}
+Use tokenization and/or segmentation on a Chuvash text corpus. Evaluate the models with whole sentences.
+\subsubsection{Subgoal 3}
+Get in contact with bilingual Chuvash and English speakers for model output evaluation.
+
+\subsection{HAP Goals}
+\subsubsection{Subgoal 1}
+Understand the inner workings and parameters of the chosen speech synthesizer.
+\subsubsection{Subgoal 2}
+Tweak the synthesizer to achieve higher accuracy with Chuvash data.
+\subsubsection{Subgoal 3 (Stretch Goal)}
+Coordinate with developers to incorporate my changes into the official release/repository of the synthesizers.
+
+%------------------------------------------------------------------------
+% SECTION 4: Timelines
+%------------------------------------------------------------------------
+\section{Timelines} % weekly basis; subject to change
+\subsection{MVP Timeline}
+\begin{enumerate}
+	\item Subgoal 1: \textit{March 12, 2019}
+	\item Subgoal 2: \textit{March 15, 2019}
+	\item Subgoal 3: \textit{March 17, 2019}
+\end{enumerate}
+
+\subsection{EP Timeline}
+\begin{enumerate}
+	\item Subgoal 1: \textit{March 24, 2019}
+	\item Subgoal 2: \textit{March 31, 2019}
+\end{enumerate}
+
+\subsection{HAP Timeline}
+\begin{enumerate}
+	\item Subgoal 1: \textit{April 7, 2019}
+	\item Subgoal 2: \textit{April 13, 2019}
+	\item Subgoal 3: \textit{N/A (Stretch Goal)}
+\end{enumerate}
+
+\subsection{Project Timeline}
+\begin{enumerate}
+	\item Paper: by \textit{April 12, 2019}
+	\item Project: by \textit{April 15, 2019}
+\end{enumerate}
+
+%------------------------------------------------------------------------
+% SECTION 5: Data Policy
+%------------------------------------------------------------------------
+\section{Data Policy}
+Despite the scarcity of readily-available Chuvash datasets, I aim to only use reliable data. Currently, I'm looking to use Francis Tyers' \texttt{Turkic\_TTS} repository for training. I will study Tyers' \texttt{apertium-chv} transducer as well for insights into Chuvash's lexical features. This will be useful for quickly evaluating the quality/fidelity of text samples and voice output.
+
+The synthesizers I'll be using can be found on their respective GitHub repositories (listed below). I will follow typical software development procedures such as making regular commits, and committing every change to make backtracking easy. I plan to utilize branches on Git to allow for backtracking if needed.
+
+My final report will include easily-reproducible instructions so that other scientists will be able to achieve the same (or similar) results. In the event that my adjustments to any synthesizer improves performance, I will get in touch with the original developer to discuss how to merge our code. This might be as simple as making a pull request.
+
+My work will use a GPL-3.0 license (subject to change).
+
+\subsection{Data Sources}
+\begin{enumerate}
+	\item \href{https://github.com/ftyers/Turkic_TTS}{\underline{Turkic\_TTS} by Francis M. Tyers (ftyers)}
+	\item \href{https://github.com/apertium/apertium-chv}{\underline{apertium-chv} (GPL-3.0) by Apertium}
+\end{enumerate}
+
+\subsection{Repositories}
+\begin{enumerate}
+	\item \href{https://github.com/mozilla/TTS}{\underline{Mozilla TTS} (MPL-2.0) by Mozilla}
+	\item \href{https://github.com/CSTR-Edinburgh/Ossian}{\underline{Ossian} (Apache-2.0) by CSTR-Edinburgh}
+	\item \href{https://github.com/mozilla/LPCNet}{\underline{Mozilla LPCNet} (BSD-3-Clause) by Mozilla}
+\end{enumerate}
+
+
+%------------------------------------------------------------------------
+% REFERENCES
+%------------------------------------------------------------------------
+%\section{References}
+%\phantomsection
+\newpage
+\bibliographystyle{unsrt}
+\bibliography{sample}
+
+\onecolumn
+
+\begin{thebibliography}{9}
+\bibitem{russianBureauStatistics}
+\text{\otherlanguage{English}{Russian Bureau of Statistics: }\otherlanguage{Russian}{Владение Языками Населением Российской Федерации}\otherlanguage{English}{. (Russian)}}\\
+$\big[ \textit{Population of the Russian Federation by Languages} \big]$\\
+\texttt{http://www.gks.ru/free\_doc/new\_site/perepis2010/croc/Documents/Vol4/pub-04-05.pdf}
+
+\bibitem{speechSynthesis}
+\text{Wikipedia: Speech Synthesis}\\
+\texttt{https://en.wikipedia.org/wiki/Speech\_synthesis}
+
+\bibitem{lexAnalysis}
+\text{Wikipedia: Lexical Analysis}\\
+\texttt{https://en.wikipedia.org/wiki/Lexical\_analysis}
+
+\bibitem{mozillaTTS}
+\text{Mozilla: TTS README.md}\\
+\texttt{https://github.com/mozilla/TTS}
+
+\bibitem{mozillaLPC}
+\text{Mozilla: LPCNet README.md}\\
+\texttt{https://github.com/mozilla/LPCNet}
+
+\bibitem{wikChuvash}
+\text{Wikipedia: Chuvash Language}\\
+\texttt{https://en.wikipedia.org/wiki/Chuvash\_language}
+
+\bibitem{tdsTransferLearning}
+\text{Niklas Donges}\\
+\textit{Towards Data Science: Transfer Learning}\\
+\texttt{https://towardsdatascience.com/transfer-learning-946518f95666}
+
+\bibitem{taylorTTS} 
+Paul Taylor\\
+\textit{Text-to-Speech Synthesis}.\\
+Cambridge University Press, Cambridge, United Kingdom, 2009.
+
+\bibitem{meyerOssian}
+\text{Josh Meyer}\\
+\textit{Create New Voice with Ossian \& Merlin}\\
+\texttt{http://jrmeyer.github.io/tts/2017/09/15/Ossian-Merlin-demo.html}
+
+\bibitem{meyerChuvash}
+\text{Josh Meyer}\\
+\textit{Let's make a Chuvash voice!}\\
+\texttt{http://jrmeyer.github.io/tts/2016/12/09/tts-workshop.html}
+
+\bibitem{lpcDemo}
+\text{Jean-Marc Valin}\\
+\textit{Mozilla LPCNet Demo}\\
+\texttt{https://people.xiph.org/~jm/demo/lpcnet/}
+\end{thebibliography}
+
+%\bibitem{}
+%\text{}\\
+%\textit{}\\
+%\texttt{}
+
+%----------------------------------------------------------------------------------------
+\end{document}
