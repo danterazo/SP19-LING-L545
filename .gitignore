@@ -13,9 +13,7 @@ desktop.ini
 *.out
 SelfArx.cls
 
-/01_Tokenisation/01a/pragmatic_segmenter
-/01_Tokenisation/01a/UD_Japanese-GSD
-/Project/Proposal/old
-/Project/Chuvash Data/
+/01_Tokenisation/01a/data
+/01_Tokenisation/01a/tools
+/Project/Data
 /Project/Systems/
-/Project/Resources/
