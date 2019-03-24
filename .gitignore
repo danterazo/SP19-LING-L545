@@ -1,6 +1,5 @@
 /.idea
 *.xml
-*.iml
 desktop.ini
 
 *.aux
@@ -18,3 +17,5 @@ SelfArx.cls
 /03_Disambiguation/tools
 /Project/Data
 /Project/Systems/
+00_Unix/bigram.sh~
+01_Tokenisation/01a/bigram.sh~
