@@ -14,5 +14,5 @@ plt.ylabel('VO')
 for i in labels:  # Add labels to each of the points
     plt.text(x[i] - 0.03, y[i] - 0.03, labels[i], fontsize=9)
 
-plt.savefig("rwo.PNG")
+plt.savefig("report assets//rwo.PNG")
 plt.show()
