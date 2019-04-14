@@ -2,4 +2,4 @@
 # Dante Razo, drazo, 3/14/19
 import sys
 
-print("chuvash")
+print("ChuvashDNN")
