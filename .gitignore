@@ -9,7 +9,6 @@ desktop.ini
 *.toc
 *.bbl
 *.blg
-*.out
 *.cls
 
 /Project/Data/
