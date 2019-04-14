@@ -1,9 +1,7 @@
 /.idea
-*.xml
 desktop.ini
 
 *.aux
-*.log
 *.synctex
 *.synctex.gz
 *.toc
@@ -11,5 +9,6 @@ desktop.ini
 *.blg
 *.cls
 
+/01_Tokenisation/01a/iswiki-20190101-pages-articles.xml
 /Project/Data/
 /Project/Systems/
