@@ -11,10 +11,3 @@ desktop.ini
 *.blg
 *.out
 *.cls
-
-/01_Tokenisation/01a/data
-/01_Tokenisation/01a/tools
-/Project/Data
-/Project/Systems/
-00_Unix/bigram.sh~
-01_Tokenisation/01a/bigram.sh~
