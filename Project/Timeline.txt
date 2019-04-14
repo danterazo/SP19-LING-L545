@@ -1,0 +1,2 @@
+Data Preprocessing:
+04-07-19: restructured Turkic_TTS + converted .FLAC to .WAV files for Ossian
