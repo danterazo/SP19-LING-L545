@@ -11,3 +11,6 @@ desktop.ini
 *.blg
 *.out
 *.cls
+
+/Project/Data/
+/Project/Systems/
