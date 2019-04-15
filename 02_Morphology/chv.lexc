@@ -19,6 +19,13 @@ Multichar_Symbols
 
 LEXICON Root
 
+Guesser ;
+
+
+LEXICON Guesser
+
+🂡%<guess%>:🂡 N ;
+
 Nouns ;
 
 LEXICON CASES
