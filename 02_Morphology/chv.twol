@@ -25,7 +25,7 @@ Rules
         except
                                     %{м%}: %>: _ н ;
 
-"Surface vowel before the morpheme boundary {:0}"
+"1. Surface vowel before the morpheme boundary {:0}"
 %{Ӑ%}:0 <=> :Vowels %>: + _ ;
 
 "2. %{Ӑ%}:0 if there is previous %{м%}:0"
