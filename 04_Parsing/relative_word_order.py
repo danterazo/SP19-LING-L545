@@ -86,5 +86,5 @@ for i in labels:  # Add labels to each of the points
     plt.text(x[i] - offset, y[i] - offset, labels[i], bbox=dict(facecolor=color, alpha=0.2),
              fontsize=9)
 
-plt.savefig("report_3assets//rwo.PNG")
+plt.savefig("report_assets//rwo.PNG")
 plt.show()
