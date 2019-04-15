@@ -8,6 +8,7 @@ Multichar_Symbols
 %{A%}                ! Архифонема [а] или [е], Archiphoneme [a] or [e]
 %{Ă%}                !
 %{м%}                ! plural
+%{ъ%}                ! force back harmony
 
 %>                   ! Граница морфемы, Morpheme boundary
 
@@ -48,3 +49,4 @@ LEXICON Nouns
 тӗс:тӗс N ;       ! "вид", "aspect"
 патша:патша N ;   ! "царь", "tsar"
 куҫ:куҫ N ;       ! "глаз", "eye"
+специалист:специалист%{ъ%} N ; ! "специалист"
