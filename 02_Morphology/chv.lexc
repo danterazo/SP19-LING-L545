@@ -32,7 +32,7 @@ PLURAL ;
 
 LEXICON DER-N
 
-%<der_лӑх%>:%>л%{Ă%}х SUBST ;
+%<der_лӑх%>:%>л%{Ă%}х SUBST "weight: 1.0" ;
 
 LEXICON N
 %<n%>: PLURAL ;
