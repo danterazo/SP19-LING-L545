@@ -19,5 +19,5 @@ Rules
 "Back vowel harmony for archiphoneme {A}"
 %{A%}:а <=> BackVow: [ Cns: | %>: ]+ _ ;
 
-"surface vowel before the morpheme boundary "
-%{Ӑ%}:0 <=>  :Vowels %>:
+
+
