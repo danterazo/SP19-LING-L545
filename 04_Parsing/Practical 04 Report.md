@@ -10,15 +10,13 @@
 ```
 
 ## CoNLL17 Evaluation
-My model received a **UPOS** score of 95.57, which is only slightly below the CoNLL17 score of the Portuguse
+My Japanese model received a **UPOS** score of 95.57, which is only slightly below the CoNLL17 score of the Portuguse
 model from the last practical
 
 ## Plotting
 changed y[] assignment
 
-point to plot in 'report assets'
-
-![rwo](/report_assets/rwo.png)
+![rwo](./report_assets/rwo.png)
 
 OV = word index is lower than it's head index
 VO = word index is higher than it's head index
