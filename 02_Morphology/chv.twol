@@ -28,6 +28,9 @@ Rules
 "Surface vowel before the morpheme boundary {:0}"
 %{Ӑ%}:0 <=> :Vowels %>: + _ ;
 
+"2. %{Ӑ%}:0 if there is previous %{м%}:0"
+%{Ӑ%}:0 <=> %{м%}:0 + _ ;
+
 "3. %{м%}:0 if there is a following %{Ă%}: followed by н"
 %{м%}:0 <=> %{Ă%}: н + _ ;
 
