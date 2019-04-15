@@ -6,9 +6,14 @@ Multichar_Symbols
 %<ins%>              ! Творительный падеж, Instrumental
 
 %{A%}                ! Архифонема [а] или [е], Archiphoneme [a] or [e]
-%{Ă%}                !
+%{Ă%}                ! another archiphoneme
 %{м%}                ! plural
 %{ъ%}                ! force back harmony
+
+%{э%}                ! front vowel
+%{а%}                ! back vowel
+%{л%}                ! -н, -л, or -р
+%{с%}                ! other
 
 %>                   ! Граница морфемы, Morpheme boundary
 
@@ -39,6 +44,40 @@ LEXICON N
 %<n%>: PLURAL ;
 %<n%>: SUBST ;
 %<n%>: DER-N ;
+
+LEXICON NUM-DIGIT
+
+%<num%>:%- CASES ;
+
+LEXICON LAST-DIGIT
+
+1:1%{э%}%{л%}    NUM-DIGIT ; ! "пӗр"
+2:2%{с%}%{э%}    NUM-DIGIT ; ! "иккӗ"
+3:3%{с%}%{э%}    NUM-DIGIT ; ! "виҫҫӗ"
+4:4%{с%}%{а%}    NUM-DIGIT ; ! "тӑваттӑ"
+5:5%{э%}%{с%}    NUM-DIGIT ; ! "пиллӗк"
+6:6%{с%}%{а%}    NUM-DIGIT ; ! "улттӑ"
+7:7%{с%}%{э%}    NUM-DIGIT ; ! "ҫиччӗ"
+8:8%{э%}%{л%}    NUM-DIGIT ; ! "саккӑр"
+9:9%{э%}%{л%}    NUM-DIGIT ; ! "тӑххӑр"
+
+LEXICON LOOP
+
+                 LAST-DIGIT ;
+                 DIGITLEX ;
+
+LEXICON DIGITLEX
+
+%0:%0 LOOP ;
+1:1   LOOP ;
+2:2   LOOP ;
+3:3   LOOP ;
+4:4   LOOP ;
+5:5   LOOP ;
+6:6   LOOP ;
+7:7   LOOP ;
+8:8   LOOP ;
+9:9   LOOP ;
 
 LEXICON Nouns
 
