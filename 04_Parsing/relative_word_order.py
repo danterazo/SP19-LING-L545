@@ -69,8 +69,8 @@ plt.title('Relative Word Order of Verb and Object')
 adjust = 0.05  # forces 0.5 stepping on axes and keeps graph focused and compact
 plt.xlim([min(x) - adjust, max(x) + adjust])  # Set the x and y axis ranges
 plt.ylim([min(y) - adjust, max(y) + adjust])
-plt.xlabel('OV')  # Set the x and y axis labels
-plt.ylabel('VO')
+plt.xlabel('Object-Verb (OV)')  # Set the x and y axis labels
+plt.ylabel('Verb-Object (VO)')
 
 acc = -1  # just an accumulator
 for i in labels:  # Add labels to each of the points
@@ -86,5 +86,5 @@ for i in labels:  # Add labels to each of the points
     plt.text(x[i] - offset, y[i] - offset, labels[i], bbox=dict(facecolor=color, alpha=0.2),
              fontsize=9)
 
-plt.savefig("report assets//rwo.PNG")
+plt.savefig("report_3assets//rwo.PNG")
 plt.show()
