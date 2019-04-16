@@ -37,14 +37,10 @@
 \begin{document}
 \maketitle
 \begin{abstract}
-  Chuvash is a minority language spoken by roughly one million people in European Russia~\cite{RBS:12}. For this project, I trained an Ossian/Merlin speech synthesis model on Chuvash-language news clips. The former is a frontend for Merlin, which is a neural net based Speech Synthesis System.
-  
-  
-  This project aims to train neural net based speech synthesizers to produce intelligible Chuvash from text samples. The synthesizers used are Ossian, Mozilla TTS, and Mozilla LPCNet. At the minimum, the performance of the three will be compared. The Expected Product involves cleaning the Chuvash data to produce better results with one of the three synthesizers. If time permits, the best-performing synthesizer will be tweaked to produce even more accurate results. Data will come from reliable sources such as the Apertium project. The end goal is to train a neural network that mimics Chuvash speech to some degree, then improve on it as much as time allows.
+  Chuvash is a minority language spoken by roughly one million people in European Russia~\cite{RBS:12}. For this project, I trained an Ossian/Merlin speech synthesis model on Chuvash-language news clips. The former is a frontend for Merlin, which is a neural net based speech synthesis system. The performance of Ossian is compared to other popular solutions such as Mozilla TTS, Mozilla LPCNet, Festival, and eSpeak. Further experiments include tweaking Ossian/Merlin to produce better results.
 \end{abstract}
 
-\section{Introduction}
-\label{sect:intro}
+\section{Introduction}\label{sect:intro}
 The Chuvash language is spoken by roughly one million people in European Russia~\cite{RBS:12}. Despite the large number of speakers, it is considered a minority language. This project aims to train popular speech synthesizers to produce intelligible Chuvash from written samples.
 
 
@@ -53,14 +49,25 @@ Text-to-speech works by accepting text, conducting linguistic analysis on the in
 
 The DNNs used in this project will be trained on audio samples mainly taken from Chuvash-language news programs. Due to the small number of samples ($\sim546$) for the task at hand, I'll likely need to do transfer learning to get the best results. This technique is explained in further detail in \S2.3.
 
-\section{Speech Synthesis}
+\section{Speech Synthesis}\label{sect:speech}
 Speech synthesis is the production of artificial human speech~\cite{wiki-speechsynthesis}. Text-to-speech (TTS) is a subset of the field which focuses on taking text as input, and returning audio ``speech'' as output. There are multiple ways to do TTS, but this project will focus on Deep Neural Networks (DNNs). The best DNNs on the market sound like real humans, but they can still be distinguished by their staggered manner of speaking.
 
-\subsection{Deep Neural Net Systems}
-\label{ssec:dnn}
+\section{Deep Neural Net Systems}\label{sect:dnn}
+DNN-based systems are among the best in speech synthesis, but is the difference that extreme? Let's take a look at the models used in this project.
 
-\subsection{Data \& Corpora}
-\label{ssec:data}
+\subsection{Ossian \& Merlin}\label{ssec:ossian}
+
+\subsubsection{Parameters}
+
+\subsection{Mozilla TTS}\label{ssec:mozillaTTS}
+
+\subsection{Mozilla LPCNet}\label{ssec:lpcnet}
+
+\subsection{Festival}\label{ssec:festival}
+
+\subsection{eSpeak}\label{ssec:espeak}
+
+\subsection{Data \& Corpora}\label{ssec:data}
 
 I used Francis Tyers' \texttt{Turkic\_TTS} repository of Chuvash-language news clips to train my model.
 
@@ -68,15 +75,22 @@ I used Francis Tyers' \texttt{Turkic\_TTS} repository of Chuvash-language news c
 % talk about training here
 
 
-\subsection{DNN Models}
-\label{ssec:models}
+\subsection{Models}\label{ssec:models}
 
 
-\section{Results}
-\label{sect:results}
+\section{Results}\label{sect:results}
+\subsection{Mozilla TTS}
+\subsection{Mozilla LPCNet}
+\subsection{Festival}
+\subsection{eSpeak}
 
-\subsection{Model Evaluation}
-\label{ssec:evaluation}
+\subsection{Model Evaluation}\label{ssec:evaluation}
+
+\subsubsection{Scoring System}\label{ssec:score}
+
+\section{Improving Models}\label{sec:improving}
+\subsection{Ossian \& Merlin}\label{ssec:improveOssian}
+% talk about efforts to improve Ossian/Merlin
 
 \section*{License}
 This project is under the \texttt{GPL-3.0} license.

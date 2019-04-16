@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.4.15)  16 APR 2019 08:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.3.18)  16 APR 2019 14:05
 entering extended mode
 **"./L445 Project DRAFT.tex"
 ("L445 Project DRAFT.tex"
 LaTeX2e <2018-12-01>
-(P:\Editors\MiKTeX\tex/latex/base\article.cls
+("C:\Users\dante\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\article.cls"
 Document Class: article 2018/09/03 v1.4i Standard LaTeX document class
-(P:\Editors\MiKTeX\tex/latex/base\size11.clo
+("C:\Users\dante\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\size11.clo"
 File: size11.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
 )
 \c@part=\count80
@@ -20,14 +20,17 @@ File: size11.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 ) (acl2018.sty
-(P:\Editors\MiKTeX\tex/latex/hyperref\hyperref.sty
+("C:\Users\dante\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\hyperref.
+sty"
 Package: hyperref 2018/11/30 v6.88e Hypertext links for LaTeX
 
-(P:\Editors\MiKTeX\tex/generic/oberdiek\hobsub-hyperref.sty
+("C:\Users\dante\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\hobsub-
+hyperref.sty"
 Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
 
 
-(P:\Editors\MiKTeX\tex/generic/oberdiek\hobsub-generic.sty
+("C:\Users\dante\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\hobsub-
+generic.sty"
 Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
 Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
 Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
@@ -63,31 +66,37 @@ Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
 Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
 Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
 )
-(P:\Editors\MiKTeX\tex/latex/graphics\keyval.sty
+("C:\Users\dante\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\keyval.st
+y"
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks14
 )
-(P:\Editors\MiKTeX\tex/generic/ifxetex\ifxetex.sty
+("C:\Users\dante\AppData\Local\Programs\MiKTeX 2.9\tex/generic/ifxetex\ifxetex.
+sty"
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-(P:\Editors\MiKTeX\tex/latex/oberdiek\auxhook.sty
+("C:\Users\dante\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\auxhook.s
+ty"
 Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 )
-(P:\Editors\MiKTeX\tex/latex/oberdiek\kvoptions.sty
+("C:\Users\dante\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\kvoptions
+.sty"
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 )
 \@linkdim=\dimen103
 \Hy@linkcounter=\count88
 \Hy@pagecounter=\count89
 
-(P:\Editors\MiKTeX\tex/latex/hyperref\pd1enc.def
+("C:\Users\dante\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\pd1enc.de
+f"
 File: pd1enc.def 2018/11/30 v6.88e Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
 \Hy@SavedSpaceFactor=\count90
 
-(P:\Editors\MiKTeX\tex/latex/00miktex\hyperref.cfg
+("C:\Users\dante\AppData\Local\Programs\MiKTeX 2.9\tex/latex/00miktex\hyperref.
+cfg"
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
 Package hyperref Info: Hyper figures OFF on input line 4519.
@@ -98,8 +107,7 @@ Package hyperref Info: Backreferencing OFF on input line 4539.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4772.
 \c@Hy@tempcnt=\count91
-
-(P:\Editors\MiKTeX\tex/latex/url\url.sty
+ ("C:\Users\dante\AppData\Local\Programs\MiKTeX 2.9\tex/latex/url\url.sty"
 \Urlmuskip=\muskip10
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
@@ -123,27 +131,31 @@ LaTeX Info: Redefining \pageref on input line 6454.
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
-(P:\Editors\MiKTeX\tex/latex/hyperref\hpdftex.def
+("C:\Users\dante\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\hpdftex.d
+ef"
 File: hpdftex.def 2018/11/30 v6.88e Hyperref driver for pdfTeX
 \Fld@listcount=\count96
 \c@bookmark@seq@number=\count97
 
-(P:\Editors\MiKTeX\tex/latex/oberdiek\rerunfilecheck.sty
+("C:\Users\dante\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\rerunfile
+check.sty"
 Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
 \Hy@SectionHShift=\skip43
 )
-(P:\Editors\MiKTeX\tex/latex/xcolor\xcolor.sty
+("C:\Users\dante\AppData\Local\Programs\MiKTeX 2.9\tex/latex/xcolor\xcolor.sty"
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 
-(P:\Editors\MiKTeX\tex/latex/graphics-cfg\color.cfg
+("C:\Users\dante\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\color
+.cfg"
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
 
-(P:\Editors\MiKTeX\tex/latex/graphics-def\pdftex.def
+("C:\Users\dante\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-def\pdfte
+x.def"
 File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 )
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
@@ -170,17 +182,17 @@ Conference Style for ACL 2018
 \cv@tot=\count100
 \cv@tmpc@=\count101
 \cv@tmpc=\count102
-(P:\Editors\MiKTeX\tex/latex/natbib\natbib.sty
+("C:\Users\dante\AppData\Local\Programs\MiKTeX 2.9\tex/latex/natbib\natbib.sty"
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip45
 \bibsep=\skip46
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count103
-))
-(P:\Editors\MiKTeX\tex/latex/psnfss\times.sty
+)) ("C:\Users\dante\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\times.st
+y"
 Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
 )
-(P:\Editors\MiKTeX\tex/latex/base\latexsym.sty
+("C:\Users\dante\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\latexsym.sty"
 Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
 \symlasy=\mathgroup4
 LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
@@ -204,16 +216,18 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 37.
 LaTeX Font Info:    ... okay on input line 37.
 LaTeX Font Info:    Try loading font information for OT1+ptm on input line 37.
 
-(P:\Editors\MiKTeX\tex/latex/psnfss\ot1ptm.fd
+("C:\Users\dante\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\ot1ptm.fd"
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 \AtBeginShipoutBox=\box29
 Package hyperref Info: Link coloring ON on input line 37.
 
-(P:\Editors\MiKTeX\tex/latex/hyperref\nameref.sty
+("C:\Users\dante\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\nameref.s
+ty"
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
-(P:\Editors\MiKTeX\tex/generic/oberdiek\gettitlestring.sty
+("C:\Users\dante\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\gettitl
+estring.sty"
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count104
@@ -221,13 +235,13 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 37.
 LaTeX Info: Redefining \pageref on input line 37.
 LaTeX Info: Redefining \nameref on input line 37.
-
-("L445 Project DRAFT.out") ("L445 Project DRAFT.out")
+ ("L445 Project DRAFT.out") ("L445 Project DRAFT.out")
 \@outlinefile=\write3
 \openout3 = `"L445 Project DRAFT.out"'.
 
 
-(P:\Editors\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
+("C:\Users\dante\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp-p
+df.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count105
 \scratchdimen=\dimen110
@@ -251,61 +265,65 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 38.
 LaTeX Font Info:    Try loading font information for U+lasy on input line 38.
 
-(P:\Editors\MiKTeX\tex/latex/base\ulasy.fd
+("C:\Users\dante\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ulasy.fd"
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 38.
 LaTeX Font Info:    Try loading font information for OT1+pcr on input line 38.
 
-(P:\Editors\MiKTeX\tex/latex/psnfss\ot1pcr.fd
+("C:\Users\dante\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\ot1pcr.fd"
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 54.
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 54.
-
-(P:\Editors\MiKTeX\tex/latex/psnfss\omsptm.fd
+(Font)              <10.95> on input line 50.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 50.
+("C:\Users\dante\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\omsptm.fd"
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 54.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 50.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 59.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 58.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
  [1{C:/Users/dante/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 
 
-] ("L445 Project DRAFT.bbl")
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 93.
+]
+("L445 Project DRAFT.bbl")
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 107.
  [2
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 93.
-
-("L445 Project DRAFT.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 93.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 93.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 107.
+ ("L445 Project DRAFT.aux")
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 107.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 107.
 Package rerunfilecheck Info: File `"L445 Project DRAFT".out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 93.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 107.
  ) 
 Here is how much of TeX's memory you used:
- 5688 strings out of 492902
- 82476 string characters out of 3138222
- 176921 words of memory out of 3000000
- 9544 multiletter control sequences out of 15000+200000
- 21121 words of font info for 50 fonts, out of 3000000 for 9000
+ 5707 strings out of 492946
+ 84988 string characters out of 3126266
+ 176982 words of memory out of 3000000
+ 9540 multiletter control sequences out of 15000+200000
+ 19437 words of font info for 48 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 35i,10n,37p,693b,318s stack positions out of 5000i,500n,10000p,200000b,50000s
-{P:/Editors/MiKTeX/fonts/enc/dvips/base/8r.enc}<P:/Editors/MiKTeX/fonts/type1
-/public/amsfonts/cm/cmr10.pfb><P:/Editors/MiKTeX/fonts/type1/public/amsfonts/cm
-/cmsy10.pfb><P:/Editors/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><P:/Editors/M
-iKTeX/fonts/type1/urw/times/utmb8a.pfb><P:/Editors/MiKTeX/fonts/type1/urw/times
-/utmr8a.pfb><P:/Editors/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on "L445 Project DRAFT.pdf" (2 pages, 74664 bytes).
+ 35i,10n,37p,541b,318s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users/dante/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc
+}<C:/Users/dante/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmr10.pfb><C:/Users/dante/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmsy10.pfb><C:/Users/dante/AppData/Local/Programs/MiKTeX 2.9/fon
+ts/type1/urw/courier/ucrr8a.pfb><C:/Users/dante/AppData/Local/Programs/MiKTeX 2
+.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/dante/AppData/Local/Programs/MiKT
+eX 2.9/fonts/type1/urw/times/utmr8a.pfb>
+Output written on "L445 Project DRAFT.pdf" (2 pages, 70456 bytes).
 PDF statistics:
- 69 PDF objects out of 1000 (max. 8388607)
- 17 named destinations out of 1000 (max. 500000)
+ 80 PDF objects out of 1000 (max. 8388607)
+ 30 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
