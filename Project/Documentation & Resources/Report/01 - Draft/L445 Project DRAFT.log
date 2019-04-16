@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.4.15)  16 APR 2019 08:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.4.15)  16 APR 2019 08:49
 entering extended mode
 **"./L445 Project DRAFT.tex"
 ("L445 Project DRAFT.tex"
@@ -291,11 +291,11 @@ Package rerunfilecheck Info: File `"L445 Project DRAFT".out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 93.
  ) 
 Here is how much of TeX's memory you used:
- 5694 strings out of 492902
- 82551 string characters out of 3138222
- 176954 words of memory out of 3000000
- 9548 multiletter control sequences out of 15000+200000
- 22805 words of font info for 52 fonts, out of 3000000 for 9000
+ 5688 strings out of 492902
+ 82476 string characters out of 3138222
+ 176921 words of memory out of 3000000
+ 9544 multiletter control sequences out of 15000+200000
+ 21121 words of font info for 50 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  35i,10n,37p,693b,318s stack positions out of 5000i,500n,10000p,200000b,50000s
 {P:/Editors/MiKTeX/fonts/enc/dvips/base/8r.enc}<P:/Editors/MiKTeX/fonts/type1
@@ -303,9 +303,9 @@ Here is how much of TeX's memory you used:
 /cmsy10.pfb><P:/Editors/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><P:/Editors/M
 iKTeX/fonts/type1/urw/times/utmb8a.pfb><P:/Editors/MiKTeX/fonts/type1/urw/times
 /utmr8a.pfb><P:/Editors/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on "L445 Project DRAFT.pdf" (2 pages, 80103 bytes).
+Output written on "L445 Project DRAFT.pdf" (2 pages, 74664 bytes).
 PDF statistics:
- 70 PDF objects out of 1000 (max. 8388607)
- 18 named destinations out of 1000 (max. 500000)
+ 69 PDF objects out of 1000 (max. 8388607)
+ 17 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
