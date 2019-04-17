@@ -1,4 +1,4 @@
-# Practical 04: Parsing
+# Practical 04: Parsing / Dependency
 ## Bash
 ```bash
 > cd /04_Parsing/data/UD_Japanese-GSD/
