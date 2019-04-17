@@ -38,8 +38,7 @@ Output matches the examples, however. Due to its cyclic nature, care must be tak
 When using ```hfst-fst2strings```, make sure to define the length of the output or the max number of cycles.
 
 ## Chuvash II: Electric Boogaloo
-We return to the Chuvash transducer to add *productive derivation* and guess analysis. Pictured below is a visualization of
-Chuvash's stems. 
+We return to the Chuvash transducer to add *productive derivation* and guess analysis. Pictured below is a visualization of Chuvash's stems. 
 ![chv-stem](chv.stem.png)
 
 ## Conclusion
