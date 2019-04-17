@@ -13,3 +13,5 @@ desktop.ini
 /Project/Data/
 /Project/Systems/
 /Project/Documentation & Resources/Report/acl18-latex
+
+!/03_Disambiguation/tools/conllu-perceptron-tagger/
