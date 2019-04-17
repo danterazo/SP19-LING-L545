@@ -14,6 +14,7 @@
 \usepackage[hyperref]{acl2018}
 \usepackage{times}
 \usepackage{latexsym}
+\usepackage{hyperref}
 \usepackage{url}
 
 \aclfinalcopy % Uncomment this line for the final submission
@@ -27,10 +28,11 @@
 
 \newcommand\BibTeX{B{\sc ib}\TeX}
 
-\title{Instructions for ACL 2018 Proceedings}
+\title{Deep Neural Net Speech Synthesis for the Chuvash Language}
 
 \author{Dante Razo \\
-  Indiana University / Bloomington, IN \\
+  Indiana University, Bloomington, IN \\
+  Department of Linguistics \\
   {\tt drazo@indiana.edu} \\}
 \date{04/15/2019}
 
@@ -41,52 +43,79 @@
 \end{abstract}
 
 \section{Introduction}\label{sect:intro}
-The Chuvash language is spoken by roughly one million people in European Russia~\cite{RBS:12}. Despite the large number of speakers, it is considered a minority language. This project aims to train popular speech synthesizers to produce intelligible Chuvash from written samples.
-
-
+Despite the relatively large number of speakers, Chuvash is still considered a minority language. This project aimed to train popular speech synthesizers to produce intelligible Chuvash from written samples.
 
 Text-to-speech works by accepting text, conducting linguistic analysis on the input, then producing audio waveforms. Data preprocessing techniques include normalization and tokenization~\cite{wiki-lexanalysis}, though the latter is meant for text corpora used as input. Audio could be ``preprocessed'' by normalizing volume and editing silence out from samples.
 
-The DNNs used in this project will be trained on audio samples mainly taken from Chuvash-language news programs. Due to the small number of samples ($\sim546$) for the task at hand, I'll likely need to do transfer learning to get the best results. This technique is explained in further detail in \S2.3.
+The systems used in this project will be trained on audio samples mainly taken from Chuvash-language news programs. Due to the small number of samples ($\sim546$) for the task at hand, transfer needed should be used to get the best results. Unfortunately, given the time restraint, I was unable to implement transfer learning with Ossian or the other systems.
 
 \section{Speech Synthesis}\label{sect:speech}
-Speech synthesis is the production of artificial human speech~\cite{wiki-speechsynthesis}. Text-to-speech (TTS) is a subset of the field which focuses on taking text as input, and returning audio ``speech'' as output. There are multiple ways to do TTS, but this project will focus on Deep Neural Networks (DNNs). The best DNNs on the market sound like real humans, but they can still be distinguished by their staggered manner of speaking.
+Speech synthesis is the production of artificial human speech~\cite{wiki-speechsynthesis}. Text-to-speech (TTS) is a subset of the field which focuses on taking text as input, and returning audio ``speech'' as output. There are multiple ways to do TTS, but this project will focus on Neural Networks, with one case of formant synthesis. The best neural nets on the market sound like real humans, but they can still be distinguished by their staggered manner of speaking.
 
-\section{Deep Neural Net Systems}\label{sect:dnn}
-DNN-based systems are among the best in speech synthesis, but is the difference that extreme? Let's take a look at the models used in this project.
+\section{Text-to-Speech Systems}\label{sect:dnn}
+Neural net based systems are among the best in speech synthesis, but is the difference noticeable to the layman? Let's take a look at an overview of the models used in this project: %reword to be more inclusive? mention TTS
+\begin{center}
+	\begin{tabular}{|l|r|c|}
+		\hline \bf System & \bf Basis & \bf Score \\ \hline
+		Ossian/Merlin & DNN & \textit{TBD} \\
+		Mozilla LPCNet & RNN & \textit{TBD} \\
+		Festival & \textit{TBD} & \textit{TBD} \\
+		eSpeak & Formants & \textit{TBD} \\
+		\hline
+	\end{tabular}
+
+\label{font-table}Table 1: Speech synthesis systems.
+\end{center}
+
+eSpeak is the black sheep of the bunch; it uses \textit{formant synthesis} to create language models.
+% Festival may be odd too
 
 \subsection{Ossian \& Merlin}\label{ssec:ossian}
+Ossian is a front-end for speech synthesis development by the Centre for Speech Technology Research (CSTR) at The University of Edinburgh. It's meant to interface with the Merlin library for neural-net based speech synthesis developed by the same team.
 
 \subsubsection{Parameters}
-
-\subsection{Mozilla TTS}\label{ssec:mozillaTTS}
 
 \subsection{Mozilla LPCNet}\label{ssec:lpcnet}
 
 \subsection{Festival}\label{ssec:festival}
+Modular, TTS
 
 \subsection{eSpeak}\label{ssec:espeak}
+Formant synthesis
 
 \subsection{Data \& Corpora}\label{ssec:data}
-
 I used Francis Tyers' \texttt{Turkic\_TTS} repository of Chuvash-language news clips to train my model.
+
+\begin{enumerate}
+	\item \href{https://github.com/ftyers/Turkic_TTS}{\underline{Turkic\_TTS}} by Francis M. Tyers (ftyers)
+	\item \href{https://github.com/apertium/apertium-chv}{\underline{apertium-chv}} (GPL-3.0) by Apertium
+\end{enumerate}
+
+\subsubsection{Repositories} % TODO: link only to repos used
+\begin{enumerate}
+	\item \href{https://github.com/mozilla/TTS}{\underline{Mozilla TTS}} (MPL-2.0) by Mozilla
+	\item \href{https://github.com/CSTR-Edinburgh/Ossian}{\underline{Ossian}} (Apache-2.0) by CSTR-Edinburgh
+	\item \href{https://github.com/mozilla/LPCNet}{\underline{Mozilla LPCNet}} (BSD-3-Clause) by Mozilla
+\end{enumerate}
 
 \section{Training}
 % talk about training here
 
+% citations: paragraph (Foo, 2013) \citep
+%            in-text: Foo (2013) \citet
 
 \subsection{Models}\label{ssec:models}
 
 
 \section{Results}\label{sect:results}
-\subsection{Mozilla TTS}
+\subsection{Ossian \& Merlin}
 \subsection{Mozilla LPCNet}
 \subsection{Festival}
 \subsection{eSpeak}
 
-\subsection{Model Evaluation}\label{ssec:evaluation}
+\section{Model Evaluation}\label{ssec:evaluation}
 
-\subsubsection{Scoring System}\label{ssec:score}
+\subsection{Scoring System}\label{ssec:score}
 
 \section{Improving Models}\label{sec:improving}
 \subsection{Ossian \& Merlin}\label{ssec:improveOssian}
@@ -96,7 +125,9 @@ I used Francis Tyers' \texttt{Turkic\_TTS} repository of Chuvash-language news c
 This project is under the \texttt{GPL-3.0} license.
 
 \section*{Acknowledgments}
-I'd like to acknowledge Francis M. Tyers' work on the \texttt{Turkic\_TTS}
+I'd like to acknowledge Francis M. Tyers' work on the \texttt{Turkic\_TTS} corpus. Compiling the data was easy using the provided instructions. I'd like the thank Professor Tyers again for his website, reading, and tutorial recommendations. Thanks to the original authors of the ACL 2018 format as well for this template. Finally, thanks to Josh Meyer for his extremely helpful \textbf{Ossian} and \textbf{eSpeak} tutorials.
+%get ACL2018 format authors
+%Josh Meyer tutorials
 
 % include your own bib file like this:
 %\bibliographystyle{acl}
@@ -105,3 +136,4 @@ I'd like to acknowledge Francis M. Tyers' work on the \texttt{Turkic\_TTS}
 \bibliographystyle{acl_natbib}
 
 \end{document}
+

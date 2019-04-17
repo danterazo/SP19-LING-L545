@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.3.18)  16 APR 2019 14:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.4.16)  16 APR 2019 18:01
 entering extended mode
 **"./L445 Project DRAFT.tex"
 ("L445 Project DRAFT.tex"
@@ -200,27 +200,27 @@ LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
 ) ("L445 Project DRAFT.aux")
 \openout1 = `"L445 Project DRAFT.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 37.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 39.
 
 ("C:\Users\dante\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\ot1ptm.fd"
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 \AtBeginShipoutBox=\box29
-Package hyperref Info: Link coloring ON on input line 37.
+Package hyperref Info: Link coloring ON on input line 39.
 
 ("C:\Users\dante\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\nameref.s
 ty"
@@ -232,9 +232,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count104
 )
-LaTeX Info: Redefining \ref on input line 37.
-LaTeX Info: Redefining \pageref on input line 37.
-LaTeX Info: Redefining \nameref on input line 37.
+LaTeX Info: Redefining \ref on input line 39.
+LaTeX Info: Redefining \pageref on input line 39.
+LaTeX Info: Redefining \nameref on input line 39.
  ("L445 Project DRAFT.out") ("L445 Project DRAFT.out")
 \@outlinefile=\write3
 \openout3 = `"L445 Project DRAFT.out"'.
@@ -256,62 +256,53 @@ df.mkii"
 \everyMPtoPDFconversion=\toks16
 ) ABD: EveryShipout initializing macros
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 38.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 40.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 38.
+(Font)              <12> on input line 40.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 38.
+(Font)              <8> on input line 40.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 38.
-LaTeX Font Info:    Try loading font information for U+lasy on input line 38.
+(Font)              <6> on input line 40.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 40.
 
 ("C:\Users\dante\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ulasy.fd"
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 38.
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 38.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 40.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 40.
 
 ("C:\Users\dante\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\ot1pcr.fd"
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <10.95> on input line 50.
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 50.
-("C:\Users\dante\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\omsptm.fd"
-File: omsptm.fd 
-)
-LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 50.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 58.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [1{C:/Users/dante/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 59.
+[1{C:/Users/dante/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 
 
 ]
 ("L445 Project DRAFT.bbl")
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 107.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 138.
  [2
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 107.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 138.
  ("L445 Project DRAFT.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 107.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 107.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 138.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 138.
 Package rerunfilecheck Info: File `"L445 Project DRAFT".out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 107.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 138.
  ) 
 Here is how much of TeX's memory you used:
- 5707 strings out of 492946
- 84988 string characters out of 3126266
- 176982 words of memory out of 3000000
- 9540 multiletter control sequences out of 15000+200000
- 19437 words of font info for 48 fonts, out of 3000000 for 9000
+ 5698 strings out of 492902
+ 84706 string characters out of 3123806
+ 179324 words of memory out of 3000000
+ 9539 multiletter control sequences out of 15000+200000
+ 21121 words of font info for 50 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  35i,10n,37p,541b,318s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/dante/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc
@@ -320,10 +311,11 @@ cm/cmr10.pfb><C:/Users/dante/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
 ic/amsfonts/cm/cmsy10.pfb><C:/Users/dante/AppData/Local/Programs/MiKTeX 2.9/fon
 ts/type1/urw/courier/ucrr8a.pfb><C:/Users/dante/AppData/Local/Programs/MiKTeX 2
 .9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/dante/AppData/Local/Programs/MiKT
-eX 2.9/fonts/type1/urw/times/utmr8a.pfb>
-Output written on "L445 Project DRAFT.pdf" (2 pages, 70456 bytes).
+eX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/dante/AppData/Local/Programs/
+MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on "L445 Project DRAFT.pdf" (2 pages, 82548 bytes).
 PDF statistics:
- 80 PDF objects out of 1000 (max. 8388607)
- 30 named destinations out of 1000 (max. 500000)
+ 93 PDF objects out of 1000 (max. 8388607)
+ 35 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
