@@ -1,5 +1,6 @@
 # Practical 04: Parsing / Dependency
 ## Bash
+Listed below is the code used for parsing and evalutaing the **UD_Japanese-GSD** dataset.
 ```bash
 > cd /04_Parsing/data/UD_Japanese-GSD/
 > udpipe --tokenizer none --tagger none --train ja.udpipe < ja_gsd-ud-train.conllu
@@ -11,12 +12,31 @@
 
 ## CoNLL17 Evaluation
 My Japanese model received a **UPOS** score of 95.57, which is only slightly below the CoNLL17 score of the Portuguse
-model from the last practical
+model from the last practical (96.56).
+
+## Data
+I used treebanks of 10 different languages:
+1. Chinese
+2. French
+3. German
+4. Indonesian
+5. Japanese
+6. Korean
+7. Portuguese
+8. Russian
+9. Spanish
+10. Turkish
 
 ## Plotting
-changed y[] assignment
+To calculate *x* and *y*, I wrote a script (```04_Parsing\relative_word_order.py```) to parse my datasets. 
+I was given code for plotting, which I modified heavily to improve readability. I used the following in my script
+to calculate *x* and *y*:
+
+| Axis | Order | Condition                                    |
+|:----:|:-----:|:--------------------------------------------|
+| x    | OV    | Word index is lower than (<) its head index  |
+| y    | VO    | Word index is higher than (>) its head index |
+  
+The final plot is as follows:
 
 ![rwo](./report_assets/rwo.png)
-
-OV = word index is lower than it's head index
-VO = word index is higher than it's head index
