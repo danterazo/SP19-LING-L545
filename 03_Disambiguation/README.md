@@ -1,6 +1,6 @@
 # Practical 3: Disambiguation
 ## Bash
-One-liner for processing data (in this example, the *UD_Portuguese-GSD* dataset):
+One-liner for processing data (in this example, the **UD_Portuguese-GSD** dataset):
 ```bash
 > cat ../../data/UD_Portuguese-GSD/pt_gsd-ud-dev.conllu | python3 tagger.py pt-ud.dat > pt-ud-dev.out && python3 ../coNLL17/conll17_ud_eval.py --verbose ../../data/UD_Portuguese-GSD/pt_gsd-ud-dev.conllu pt-ud-dev.out
 ```
