@@ -1,4 +1,4 @@
-## Practical 01b
+## Practical 01b: Segmentation & Tokenization
 ## Segmentation Questions
 1. How should you segment sentences with semicolons? As a single sentence or as two sentences? Should it depend on context?  
 Sentences with semicolons should be treated as two separate sentences. Semicolons conjoin two independent (yet related)
