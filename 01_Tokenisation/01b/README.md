@@ -16,8 +16,7 @@ Single-word exclamations are sentences and should be counted as such. This is im
 can carry strong positive or negative sentiment (i.e. "Argh!" or "Nice!").
 
 4. Can you think of some hard tasks for the segmenter?  
-"W. E. B. DuBois... he's all over the place; I saw him runnin' around town."
-
+"W. E. B. DuBois... he's all over the place; I saw him runnin' around town."  
 Here, periods indicate both initials, ellipses (as a set of 3), and the end of the sentence. Apostrophes represent both
 contractions and the reduction of [ŋɡ] to [n], the alveolar nasal consonant, in colloquial English. The semicolon links
 two related sentences together; readers rely on the former to determine who 'him' is referring to in the latter.
