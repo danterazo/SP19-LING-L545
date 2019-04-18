@@ -1,0 +1,3 @@
+
+Step 1 in script /home/drazo/Ossian//scripts/acoustic_model_training/subrecipes/script/standard_alignment.sh failed, aborted!
+
