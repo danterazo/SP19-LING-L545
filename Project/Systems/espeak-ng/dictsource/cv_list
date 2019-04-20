@@ -1,0 +1,76 @@
+// letter name
+
+а	a
+ӑ	@
+б	b@
+в	v#@
+г	g@
+д	d@
+е	E
+ё	jo
+ӗ	@.
+ж	z.@
+з	z@
+и	i
+й	j@
+к	k@
+л	l@
+м	m@
+н	n@
+о	o
+п	p@
+р	R@
+с	s@
+ҫ	S.@
+т	t@
+у	u
+ӳ	y
+ф	f@
+х	X@
+ц	ts@
+ч	tS.@
+ш	s.@
+щ	S.S.@
+ъ	Xu-t@l@X||palli
+ы	u-
+ь	S.EmS.El@.X||palli
+э	e
+ю	ju
+я	ja
+
+// numeric
+
+_0	nol // cannot find any source. guess from Russian & listening to the audio clip
+_1	p@.RRE
+_2	ikk@.
+_3	v#iS.S.@.
+_4	t@v#att@
+_5	pill@.k
+_6	ultt@
+_7	S.itS.tS.@.
+_8	sakk@R
+_9	t@XX@R
+_10	v#unn@
+_11	v#un||p@.R
+_12	v#un||ikk@.
+_13	v#un||v#iS.S.@.
+_14	v#un||t@v#att@
+_15	v#un||pill@.k
+_16	v#un||ultt@
+_17	v#un||S.itS.tS.@.
+_18	v#un||sakk@R
+_19	v#un||t@XX@R
+
+_2X	S.iR@.m||
+_3X	v#@d@R||
+_4X	X@.R@.X||
+_5X	all@||
+_6X	utm@l||
+_7X	S.itm@.l||
+_8X	sak@Rv#unn@||
+_9X	t@X@Rv#unn@||
+
+// large numbers, short scale
+_0C	S.@.R
+_0M1	pin
+_0and	RE
