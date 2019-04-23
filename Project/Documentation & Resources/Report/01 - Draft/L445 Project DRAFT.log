@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.4.15)  22 APR 2019 09:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.4.15)  23 APR 2019 07:19
 entering extended mode
 **"./L445 Project DRAFT.tex"
 ("L445 Project DRAFT.tex"
@@ -270,35 +270,33 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
 
 
 ] ("L445 Project DRAFT.bbl")
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 145.
- [2
-
-]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 145.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 153.
+ [2]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 153.
 
 ("L445 Project DRAFT.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 145.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 145.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 153.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 153.
 Package rerunfilecheck Info: File `"L445 Project DRAFT".out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 145.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 153.
  ) 
 Here is how much of TeX's memory you used:
- 5698 strings out of 492902
- 82537 string characters out of 3138222
+ 5702 strings out of 492902
+ 82574 string characters out of 3138222
  179326 words of memory out of 3000000
  9539 multiletter control sequences out of 15000+200000
  21121 words of font info for 50 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 35i,10n,37p,602b,318s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 35i,10n,37p,603b,318s stack positions out of 5000i,500n,10000p,200000b,50000s
 {P:/Editors/MiKTeX/fonts/enc/dvips/base/8r.enc}<P:/Editors/MiKTeX/fonts/type1
 /public/amsfonts/cm/cmr10.pfb><P:/Editors/MiKTeX/fonts/type1/public/amsfonts/cm
 /cmsy10.pfb><P:/Editors/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><P:/Editors/M
 iKTeX/fonts/type1/urw/times/utmb8a.pfb><P:/Editors/MiKTeX/fonts/type1/urw/times
 /utmr8a.pfb><P:/Editors/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on "L445 Project DRAFT.pdf" (2 pages, 82785 bytes).
+Output written on "L445 Project DRAFT.pdf" (2 pages, 84222 bytes).
 PDF statistics:
- 93 PDF objects out of 1000 (max. 8388607)
- 35 named destinations out of 1000 (max. 500000)
+ 103 PDF objects out of 1000 (max. 8388607)
+ 39 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
