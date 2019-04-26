@@ -1,0 +1,320 @@
+%
+% File acl2018.tex
+%
+%% Based on the style files for ACL-2017, with some changes, which were, in turn,
+%% Based on the style files for ACL-2015, with some improvements
+%%  taken from the NAACL-2016 style
+%% Based on the style files for ACL-2014, which were, in turn,
+%% based on ACL-2013, ACL-2012, ACL-2011, ACL-2010, ACL-IJCNLP-2009,
+%% EACL-2009, IJCNLP-2008...
+%% Based on the style files for EACL 2006 by 
+%%e.agirre@ehu.es or Sergi.Balari@uab.es
+%% and that of ACL 08 by Joakim Nivre and Noah Smith
+\documentclass[11pt,a4paper]{article}
+\usepackage[hyperref]{acl2018}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{hyperref} % hyperlinks
+\usepackage{url} % URLs
+\usepackage[center]{caption} % center table captions
+\usepackage{fancyvrb} % center verbatim
+\usepackage{tipa} % IPA
+\usepackage{listings} % verbatim alternative
+\usepackage{graphicx} % insert images
+\usepackage{float} % box for figures
+	\floatstyle{boxed} 
+	\restylefloat{figure}
+\usepackage[russian,english]{babel} % cyrillic; default language last
+	\usepackage[utf8]{inputenc}
+\usepackage{subfig} % subfigure
+
+\aclfinalcopy % Uncomment this line for the final submission
+%\def\aclpaperid{***} %  Enter the acl Paper ID here
+
+%\setlength\titlebox{5cm}
+% You can expand the titlebox if you need extra space
+% to show all the authors. Please do not make the titlebox
+% smaller than 5cm (the original size); we will check this
+% in the camera-ready version and ask you to change it back.
+
+\newcommand\BibTeX{B{\sc ib}\TeX}
+\newenvironment{alltt}{\ttfamily}{\par}
+\addto\captionsrussian{\renewcommand{\figurename}{Figure}} % avoid accidental Russian titles
+\renewcommand{\figurename}{Figure} 
+\renewcommand{\tablename}{Table}
+
+\title{Deep Neural Net Speech Synthesis for the Chuvash Language}
+
+\author{Dante Razo \\
+  Indiana University, Bloomington, IN \\
+  Department of Linguistics \\
+  {\tt drazo@indiana.edu} \\}
+\date{04/15/2019}
+
+\begin{document}
+\maketitle
+\graphicspath{{assets/}}
+\begin{abstract}
+  Chuvash is a minority language spoken by roughly one million people in European Russia~\cite{RBS:12}. It is a Turkic language that utilizes the Cyrillic alphabet. For this project, I trained an Ossian/Merlin speech synthesis model on Chuvash-language news clips. The former is a front-end for Merlin, which is a neural net based speech synthesis system. The performance of Ossian was to be compared to other popular solutions such as Mozilla TTS, Mozilla LPCNet, Festival, and eSpeakNG. Due to the time constraint, I was only able to completely train the Ossian/Merlin model.
+\end{abstract}
+
+\section{Introduction}\label{sect:intro}
+Despite the relatively large number of speakers, Chuvash is still considered a minority language. This project aimed to train popular speech synthesizers to produce intelligible Chuvash from written samples. The sparsity of data made this more of a challenge than if I had used another, more popular language.
+
+Text-to-speech works by accepting text, conducting linguistic analysis on the input, then producing audio waveforms. Data preprocessing techniques include normalization and tokenization~\cite{wiki-lexanalysis}, though the latter is meant for text corpora used as input. Audio could be ``preprocessed'' by normalizing volume and adding silence to the beginning of files. While this seems counterproductive, establishing a noise floor to helps the system filter out background sounds like fans or other peoples' conversations.
+
+Most of the systems featured in this project are trained on audio samples. I used clips from Chuvash-language news programs as my primary corpus. Due to the small number of samples   ($\sim546$) for the task at hand, \textit{transfer learning} should be used to get the best results. Unfortunately, given the time restraint, I was unable to implement this technique with Ossian or the other systems. Transfer learning would entail training a \textbf{Deep Neural Net} (DNN) on a language with copious amounts of data (like English, for example), then carrying over neuron weights to the Chuvash DNN. Despite phonological and syntactical differences, there are enough similarities between the languages (or any two for that matter) for transfer learning to be effective.
+
+Speech synthesis is the production of artificial human speech~\cite{wiki-speechsynthesis}. Text-to-speech (TTS) is a subset of the field which focuses on taking text as input and returning synthesized audio ``speech'' as output. There are multiple ways to do TTS, but this project will focus on neural networks and one formant synthesis solution. The best neural nets on the market sound like real humans, but they can still be distinguished by their staggered manner of speaking. Examples can be found on Bloomington's public transportation when arriving at stops or in your phone via voice assistants. A few famous examples of TTS are Microsoft Sam, a very simple program included in early versions of Windows, NOAA Severe Weather Alerts, and the late Stephen Hawking's voice synthesizer.
+
+\section{Text-to-Speech Systems}\label{sect:dnn}
+Neural net systems are among the best in speech synthesis, but are they necessary to achieve fluid, intelligible speech? An overview of the models used in this project can be seen in Table~\ref{sss-table}.
+
+\begin{table}[t!]
+	\begin{center}
+		\begin{tabular}{|l|r|c|}
+			\hline \bf System & \bf Basis & \bf Rank \\ \hline
+			Ossian \& Merlin & DNN & \textit{1} \\
+			Mozilla LPCNet & RNN & \textit{3} \\
+			eSpeakNG & Formants & \textit{2} \\
+			\hline
+		\end{tabular}
+	\end{center}
+\caption{\label{sss-table} Speech synthesis systems. }
+\end{table}
+
+The criteria used for ranking the systems will be described in further detail later in this report. The two main factors I used when comparing them are said to be a speech synthesis system's most important: \textit{naturalness} and \textit{intelligibility}~\cite{taylor-tts}.
+
+\subsection{Ossian \& Merlin}\label{sect:ossian}
+Ossian is a front-end for speech synthesis development by the Centre for Speech Technology Research (CSTR) at The University of Edinburgh. It serves as the text processor and front-end for the Merlin library, which is a neural-net based speech synthesis system developed by the same team. Merlin uses a \textbf{DNN} for training acoustic models and could be considered the ``brains'' of the dichotomy. The libraries make use of both \texttt{.txt} and \texttt{.wav} files for training.~\cite{ossian-git}.
+
+\subsection{eSpeakNG}\label{sect:espeakng}
+eSpeakNG (Next Generation) is the only non-neural-net system I used for this project. It derives the ``NG'' moniker from its status as a fork of the original eSpeak project by Johnathan Duddington. It takes a unique approach to speech synthesis by instead using \textit{formant synthesis}~\cite{espeak-og} on written rules for the language. Once you provide morphological and phonological rules, it can piece individual sounds together to form a cohesive audio sample. I referred to documentation for both eSpeak and eSpeakNG when conducting this project, but I chose to use the latter because it is more up-to-date than its predecessor.
+
+I tested eSpeakNG with short English and Spanish phrases and achieved impressive results. Both samples were intelligible, and in the case of Spanish, especially fluid.
+
+\subsection{Mozilla LPCNet}\label{ssec:lpcnet}
+Mozilla's LPCNet uses a recurrent neural net (\textbf{RNN}) for training and aims to make speech synthesis painless on regular consumer computers~\cite{moz-lpc}. Though a high-end GPU is recommended, training can be done on a midrange CPU. This system requires special 16-bit, 16 kHz PCM machine-endian audio files for training. I was unable to automate the conversion process and had to abandon LPCNet in the interest of time.
+
+\subsection{Data \& Preprocessing}\label{ssec:data}
+I used Francis Tyers' \texttt{Turkic\_TTS} repository of Chuvash-language news clips to train my model. Located in the \texttt{./corpus/chv/speakers/chuvash\_news/} folder is a README detailing how to extract training data from the repository. This grew the size of my project folder considerably, but it gave me usable data. No further preprocessing was required for Ossian.
+
+LPCNet requires a very specific encoding for audio input. Preprocessing was necessary but not feasible given my unfamiliarity with endianness as it pertains to audio. Attempting to convert audio by hand resulted in painfully loud audio samples that resembled screeching. I believe this has more to do with endinanness than the other requirements (frequency, bits, and waveform).
+
+\subsubsection{Corpora Repositories}
+I made use of the following repositories for training and testing models:
+
+\begin{enumerate}
+	\item \href{https://github.com/ftyers/Turkic_TTS}{\underline{Turkic\_TTS}} by Francis M. Tyers (\textit{ftyers})
+	\item \href{https://github.com/apertium/apertium-chv}{\underline{apertium-chv}} (GPL-3.0) by \textit{Apertium}
+\end{enumerate}
+
+\section{Configuration \& Training}
+All training was done in an Ubuntu 18.04 virtual machine with 8 cores and 8GB of RAM. Due to the virtualization, the OS was unable to access my graphics card for quick training. The first system I tried to train, Mozilla TTS, was dependent on a GPU. LPCNet, also written by Mozilla, requires the same. My virtual machine setup was a limiting factor in which systems I was ultimately able to pursue.
+
+Josh Meyer's TTS Workshop guide~\cite{jrmeyer-voice} proved invaluable in setting up Ossian \& Merlin. It listed dependencies, Hidden Markov Model Toolkit (HTK, a dependency) installation instructions, and more. The biggest factors in the success of this project were Meyer's guide and the \texttt{Turkic\_TTS} repository of well-organized audio data.
+
+\subsection{Training Ossian}
+Training was, as expected, a lengthy process. It utilized all of my CPU power and rendered my computer --- both the host and the virtual Linux machine by extension --- near-useless on occasion. Training lasted roughly 4 hours. The Ossian model was trained on April 9, 2019.
+
+\subsection{Configuring eSpeakNG}
+\begin{table}[t!]
+	\begin{center}
+		\begin{tabular}{|c|c|}
+			\hline \bf Filepath & \bf Action \\\hline
+			./Makefile.am & \it edit\\\hline
+			./phsource/phonemes & \it edit\\\hline
+			./phsource/ph\_chuvash & \it create\\\hline
+			./dictsource/cv\_extra & \it create\\\hline
+			./dictsource/cv\_list & \it create\\\hline
+			./dictsource/cv\_rules & \it create\\\hline
+			./espeak-data/voices/family/trk & \it create\\\hline
+		\end{tabular}
+	\end{center}
+	\caption{\label{espeak-table} eSpeakNG Modifications.\\~\cite{jrmeyer-espeak} }
+\end{table}
+
+The eSpeakNG library does not require training in the same sense as other neural-net-based systems. Instead, the target language's phonological rules are written in text for the library to ``learn''.
+
+Initially, I installed the version of eSpeakNG from the Ubuntu package manager to get a feel for it and test it out. This can be done with the following code:
+\begin{verbatim}
+> sudo apt-get install espeak-ng
+\end{verbatim}
+
+In order to use custom languages, one must clone the eSpeakNG repository, build it using the provided scripts, `\texttt{make}' it, then install. First, I installed dependencies (a few of which were already present on my machine):
+
+\begin{verbatim}
+> apt-get install make autoconf \
+automake libtool pkg-config
+\end{verbatim}
+
+Once the dependencies were installed and/or updated, I cloned Harry Zhang's fork~\cite{espeak-cv} of the official \texttt{espeak-ng} repository. The following code clones the repo, enters the new directory, then tells Git to focus on the desired repository branch.
+
+\begin{verbatim}
+> git clone https://github.com/ \
+Contextualist/espeak-ng \
+espeak-ng-chv
+> cd espeak-ng-chv
+> git checkout cv
+\end{verbatim}
+
+Finally, use the following code to generate the files needed to build eSpeakNG, build it, then install it to the \texttt{/usr} directory.
+
+\begin{verbatim}
+> ./autogen.sh
+> ./configure --prefix=/usr
+> make
+> sudo make install
+\end{verbatim}
+
+\subsection{Adding Chuvash to eSpeakNG}
+Josh Meyers' guide~\cite{jrmeyer-espeak} outlined how to add any language to eSpeakNG. I followed the first few steps before electing to use Harry's library with the necessary files already added in the interest of time. I double-checked Harry's work against the guide, and it appears that he followed it faithfully. The changes necessary to implement Chuvash are outlined in Table~\ref{espeak-table}.
+
+\subsubsection{Voice File}
+The voice file is a simple declaration of the name of the language you wish to add, and a two-letter code for it. 
+
+The file must be placed in the correct directory for eSpeakNG to recognize it. Since Chuvash is part of the Turkic family of languages, I put the voice file in the \texttt{./espeak-ng-data/voices/trk}
+
+The file must be placed in the correct directory. Since Chuvash is part of the Turkic family of languages, its voice file should go in the \texttt{./espeak-ng-data/voices/trk} directory. The following code was used to navigate here, create the \texttt{trk} folder, enter it, then create a file named \texttt{cv}:
+\begin{verbatim}
+> cd espeak-ng-data/voices
+> mkdir trk
+> cd trk
+> touch cv
+\end{verbatim}
+
+I used \textbf{nano}, my favorite command-line text editor, to edit and save \texttt{cv}. The contents of the file are transcribed below using the \texttt{cat} command.
+\begin{center}
+\begin{verbatim}
+	> cat cv
+\end{verbatim}
+\begin{Verbatim}
+  name chuvash
+  language cv
+\end{Verbatim}
+\end{center}
+
+\subsubsection{Phoneme Definition File}
+\begin{table}[t!]
+	\begin{center}
+		\begin{tabular}{|c|c|c|}
+			\hline \bf \small{Phn} & \bf Manner \& Place of Articulation & \bf IPA \\\hline
+			
+			@ & Close-mid central unrounded vowel & \textipa{[9]}\\\hline
+			r & Alveolar trill & \textipa{[r]}\\\hline
+			S & Voiceless alveolopalatal fricative & \textipa{[C]}\\\hline
+			Z & Voiced alveolopalatal fricative & \textipa{[\textctz]}\\\hline
+			tS & Voiceless alveolopalatal affricate & \textipa{[tC]}\\\hline
+			dZ & Voiced alveolopalatal affricate & \textipa{[d\textctz]}\\\hline
+		\end{tabular}
+	\end{center}
+	
+	\caption{\label{ph-cv-table} Sample of Chuvash phonemes. }
+\end{table}
+
+This file is used to define the sounds of the target language. The following code was used to create the \textit{phoneme definition file} for Chuvash.
+
+\begin{verbatim}
+> cd ./phsource/
+> touch ph_chuvash
+\end{verbatim}
+
+Due to the time constraint, only the vowels in Table~\ref{ph-cv-table} were implemented. Figure~\ref{ph-cv-example} below is the entry for the \textit{voiced alveolopalatal fricative}.
+
+\begin{figure}[h!]
+	\texttt{phoneme Z.\\vcd alp sib frc\\//voicingswitch S.\\ipa \textipa{[\textctz]}\\endphoneme}
+	\caption{\label{ph-cv-example} Voiced alveolopalatal fricative. }
+\end{figure}
+
+\subsubsection{Dictionary Files}
+In Table~\ref{espeak-table}, there were three files created in the \texttt{./dictsource} directory. These are the \textit{dictionary files}. Their purpose is to match text to sounds for eSpeakNG. Figures~\ref{cv-list} and \ref{cv-rules} were taken from \texttt{cv\_list} and \texttt{cv\_rules} respectively and represent the letter \otherlanguage{Russian}{й}.
+
+\begin{figure}[h!]
+	\centering
+	\subfloat[cv\_list entry]{\label{cv-list}{\includegraphics[scale=0.3]{cv-list.PNG}}}
+	\qquad
+	\subfloat[cv\_rules entry]{\label{cv-rules}{\includegraphics[scale=0.3]{cv-rules.PNG}}}
+
+\caption{Chuvash dictionary entries for \otherlanguage{Russian}{й}}
+\end{figure}
+
+\begin{otherlanguage}{english}
+\subsubsection{Master Phoneme File}
+Next, the \texttt{phonemes} file located in \texttt{./phsource} needed to be edited to include references to the new Chuvash files. The following two lines were added to the final section of the file titled ``\textit{ADDITIONAL PHONEME TABLES}'':
+\begin{verbatim}
+phonemetable cv base2
+include ph_chuvash
+\end{verbatim}
+
+\subsubsection{Makefile}
+In order to compile new eSpeakNG languages when running \texttt{make}, the \texttt{Makefile.am} must be modified to point towards the \textit{master phoneme file} created in the previous step. The following line was added under the \textit{dictionaries} header to point \texttt{make} to the new Chuvash dictionary file:
+\begin{Verbatim}
+dictionaries: \
+   ...
+   espeak-ng-data/cv_dict \
+   ...
+\end{Verbatim}
+
+Below the \textit{dictionaries} section but not within it, the following references to \texttt{cv\_dict}, \texttt{cv\_list}, \texttt{cv\_rules} were added:
+
+\begin{verbatim}
+cv: espeak-ng-data/cv_dict
+espeak-ng-data/cv_dict: 
+   dictsource/cv_list dictsource 
+   /cv_rules
+\end{verbatim}
+
+\subsubsection{Compiling Changes}
+The following one-liner will \texttt{make} and update your installation of eSpeakNG. I ran it every time I made a change to the library's files.
+\begin{verbatim}
+> make && sudo make install
+\end{verbatim}
+
+\section{Results \& Evaluation}\label{sect:results}
+\subsection{Scoring System}
+In the request-for-proposal (RFP), I outlined an objective scoring system that I could use despite not being fluent in Chuvash. Due to the small set of systems I used, this system is no longer necessary. I have ranked the systems below:
+\begin{enumerate}
+	\item Ossian \& Merlin
+	\item eSpeakNG
+	\item Mozilla LPCNet
+\end{enumerate}
+
+The rankings for each system are explained below in their respective section.
+
+\subsection{Ossian \& Merlin}
+Ossian was the only system that I was able to get working with Chuvash. The audio sounds good, and will likely be intelligible to speakers of the language. It received the first-place distinction mostly due to the fact that it worked and produced results for Chuvash.
+
+\subsection{eSpeakNG}
+eSpeakNG, when installed from the Ubuntu package manager, worked with all preconfigured languages. I tested \textit{English} and \textit{Spanish} primarily and got good results. eSpeakNG placed second because it works with other languages but not Chuvash (yet).
+
+\subsection{Mozilla LPCNet}
+Mozilla's \textbf{LPCNet} showed promise, but it gets third place because I was unable to configure and train it before the deadline. I believe it would still get third place even if it had worked. The demo audio clips from the documentation~\cite{lpcnet-doc} are intelligible (for English, at least), but they have a lower bitrate than eSpeakNG's synthesized samples.
+
+\subsection{Additional Systems}
+I previously attempted to configure Mozilla's ``\textbf{TTS}'' DNN-based system, but I was unable to set it up as well. It required \textbf{Docker}, a virtualization software that I was unfamiliar with. Using Docker renders my VirtualBox Ubuntu installation useless because they can't work concurrently. Without Linux, the rest of the project would be impossible, so Mozilla TTS was not an option.
+
+\section{Future}\label{sec:future}
+I originally planned on training more than one neural-net based speech synthesis system as well as eSpeakNG. It was an ambitious goal, but time was the biggest limiting factor. Having more than one system would give me multiple points of comparison (one DNN-based, one RNN-based, and one that utilizes \textit{formant synthesis}).
+
+There are some data preprocessing techniques I wanted to try in an effort to get better results with Ossian. Ideas include removing silence from the \textbf{end} of audio files since the noise floor would have already been established by then, and regulating volume throughout the entire dataset with ReplayGain. Transfer learning, though not necessarily a data preprocessing technique, is guaranteed to improve model performance. Implementing it would be a whole project in itself, however.
+
+If I could get in contact with a native speaker of Chuvash, I would have them score audio samples using the objective scoring system developed for my RFP.
+
+Finally, if I made any breakthroughs in implementing Chuvash into eSpeakNG, I would make a pull request for the developers to integrate my code into the repository's main branch. One of my personal goals is to contribute to an open-source software project in the near future.
+
+\section*{Acknowledgments}
+I'd like to acknowledge Francis M. Tyers' work on the \texttt{Turkic\_TTS} corpus. Compiling the data was easy using the provided scripts and instructions. I'd like to thank Professor Tyers again for his website, reading, and tutorial recommendations which improved my understanding of the Chuvash language and the tools used in this project. Thanks to the original authors of the ACL 2018 format as well for this template. Thanks to Josh Meyer for his extremely helpful \textbf{Ossian} and \textbf{eSpeakNG} tutorials. Finally, thanks to Harry Zhang for his advice on audio preprocessing and preliminary work on implementing Chuvash into the eSpeakNG library.
+
+\section*{License}
+This project is licensed under the GNU General Public License v3.0 (\href{https://www.gnu.org/licenses/gpl-3.0.en.html}{\texttt{GPL-3.0}}).
+
+% BIBLIOGRAPHY / REFERENCES
+% include your own bib file like this:
+%\bibliographystyle{acl}
+%\bibliography{acl2018}
+\bibliography{projbib}
+\bibliographystyle{acl_natbib}
+
+\end{otherlanguage}
+\end{document}
+
